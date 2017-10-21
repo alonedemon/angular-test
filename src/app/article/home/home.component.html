@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let article of articles">
+          <div class="col-lg-7">
+                  <img [src]="defaultImage" class="img-responsive" > 
+                </div>
+          <div class="col-lg-5">
+                  <mat-card class="example-card">
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>
+                          <strong>
+                            {{article.title}}
+                          </strong>
+                          </mat-card-title>
+                      </mat-card-header>
+                      <mat-card-actions>
+                        <button class="btn btn-primary" mat-button (click)="nuevo(article.userId)">Nuevo</button>
+                        <button class="btn btn-primary" mat-button (click)="editar(article.id)">Editar</button>
+                      </mat-card-actions>
+                    </mat-card>
+                  </div>        
+        </mat-grid-tile>
+      </mat-grid-list>
+  </div>
+</div>
